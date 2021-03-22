@@ -6,7 +6,7 @@ console.log( "typeof 123: " ,typeof 123)
 console.log( "typeof '123': " ,typeof '123')
 console.log( "typeof true: " ,typeof true)
 console.log( "typeof undefined: " ,typeof undefined)
-console.log( "typeof null: " ,typeof null) //返回bject
+console.log( "typeof null: " ,typeof null) //返回object
 console.log( "typeof function() {}: " ,typeof function() {})
 console.log( "typeof {}: " ,typeof {})
 console.log( "typeof []: " ,typeof [])
@@ -39,10 +39,12 @@ console.log("Object.prototype.toString.call(Symbol(1))", Object.prototype.toStri
 //整合方法
 function getType(value) {
     //普通数据类型由typeof 来判断
-  if (typeof value !== "object") return typeof value;
-  var type = Object.prototype.toString.call(value);
-  console.log("Type: ", type)
-  return type.slice(8, type.length - 1).toLowerCase();
+    if (typeof value !== "object"){
+        return typeof value;
+    } 
+    var type = Object.prototype.toString.call(value);
+    console.log("Type: ", type)
+    return type.slice(8, type.length - 1).toLowerCase();
 }
 
 console.log("整合方法: ",getType(null))
