@@ -49,3 +49,7 @@ function getType(value) {
 
 console.log("整合方法: ",getType(null))
 
+//isNaN
+console.log("isNaN(5): ", isNaN(5))
+console.log("isNaN(undefined): ", isNaN(undefined))
+console.log("isNaN(null): ", isNaN(null))
