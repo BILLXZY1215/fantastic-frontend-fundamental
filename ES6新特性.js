@@ -51,6 +51,8 @@ for (const digit of digits) {
 // 展开运算符
 const books = ["Don Quixote", "The Hobbit", "Alice in Wonderland", "Tale of Two Cities"];
 console.log("展开运算符: ",...books);
+const obj = {data:"1", name:"Zeyu", id: "20125831"}
+console.log("展开运算符： ", {...obj});
 
 // 箭头函数
 const greet = name => `Hello ${name}!`;
